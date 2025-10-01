@@ -15,13 +15,12 @@ export function fizzBuzz (number) {
     try 
     {
         if (typeof number !== 'number' || isNaN(number)) {
-        return "Erro: Não é um número válido";
+        return "Error: No es un número válido";
     }
     if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
     if (number % 3 === 0) return "Fizz";
     if (number % 5 === 0) return "Buzz";
-    }
-    catch (error){
-        return "Error" = error.mensage;
+    } catch (error) {
+        return "Error: " + error.message;
     }
 }
