@@ -18,9 +18,6 @@ export function fizzBuzz (number) {
         return "Erro: Não é um número válido";
     }
     if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
+    if (number % 3 === 0) return "Fizz";
 
-    }
-    catch (error){
-        return "Error" = error.mensage;
-    }
 }
