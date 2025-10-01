@@ -4,4 +4,9 @@
 
 let history = [];
 
+export function showResult (result){
+    document.querySelector('#result p').textContent = result;
+
+
+}
 
