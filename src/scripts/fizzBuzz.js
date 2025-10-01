@@ -11,3 +11,16 @@
     }
  * */ 
 
+export function fizzBuzz (number) {
+    try 
+    {
+        if (typeof number !== 'number' || isNaN(number)) {
+        return "Erro: Não é um número válido";
+    }
+    if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
+
+    }
+    catch (error){
+        return "Error" = error.mensage;
+    }
+}
