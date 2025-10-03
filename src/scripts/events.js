@@ -12,7 +12,7 @@ function processNumber() {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('processButton').onclick = processNumber;
-    document.getElementById('numberInput').onkeydown = (event) => event.key === 'Enter' && processNumber();
+    document.getElementById('numberInput').onkeydown = 
+        (event) => event.key === 'Enter' && processNumber();
 });
-
 

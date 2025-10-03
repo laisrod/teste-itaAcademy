@@ -12,15 +12,68 @@
  * */ 
 
 export function fizzBuzz (number) {
-    try 
-    {
+    try {
         if (typeof number !== 'number' || isNaN(number)) {
-        return "Error: No es un número válido";
-    }
-    if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
-    if (number % 3 === 0) return "Fizz";
-    if (number % 5 === 0) return "Buzz";
+            return {
+                status: "error",
+                message: "No es un número válido",
+                data: {
+                    input: number,
+                    output: null
+                }
+            };
+        }
+
+        if (number % 3 === 0 && number % 5 === 0) {
+            return {
+                status: "ok",
+                message: "El número es divisible por 3 y 5",
+                data: {
+                    input: number,
+                    output: "FizzBuzz"
+                }
+            };
+        }
+        
+        if (number % 3 === 0) {
+            return {
+                status: "ok",
+                message: "El número es divisible por 3",
+                data: {
+                    input: number,
+                    output: "Fizz"
+                }
+            };
+        }
+        
+        if (number % 5 === 0) {
+            return {
+                status: "ok",
+                message: "El número es divisible por 5",
+                data: {
+                    input: number,
+                    output: "Buzz"
+                }
+            };
+        }
+
+        return {
+            status: "ok",
+            message: "El número no es divisible por 3 ni 5",
+            data: {
+                input: number,
+                output: number.toString()
+            }
+        };
+
     } catch (error) {
-        return "Error: " + error.message;
+        return {
+            status: "error",
+            message: "Error inesperado: " + error.message,
+            data: {
+                input: number,
+                output: null
+            }
+        };
     }
 }
