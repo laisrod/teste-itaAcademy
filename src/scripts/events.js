@@ -6,7 +6,14 @@ import { showResult, clearInput } from './dom.js';
 
 function processNumber() {
     const number = parseFloat(document.getElementById('numberInput').value);
-    showResult(fizzBuzz(number));
+    const result = fizzBuzz(number);
+    
+    if (result.status === 'ok') {
+        showResult(result.data.output);
+    } else {
+        showResult(result.message);
+    }
+    
     clearInput();
 }
 

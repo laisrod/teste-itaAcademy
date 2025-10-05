@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>FizzBuzz DOM</title>
 </head>
 <body>
-    <h1>FizzBuzz</h1>
+    <div class="container">
+        <div class="title-section">
+            <h1>FizzBuzz</h1>
+        </div>
 
-    <input type="number" id="numberInput" placeholder="Enter a number">
-    <button id="processButton">Process</button>
+        <div class="input-section">
+            <div class="input-group">
+                <input type="number" id="numberInput" placeholder="Ingrese un número">
+                <button id="processButton">Procesar</button>
+            </div>
+        </div>
 
-    <div id="result">
-        <p>Ingrese un número y haga clic en Procesar</p>
-    </div>
+        <div class="result-section">
+            <div id="result">
+                <p>Ingrese un número y haga clic en Procesar</p>
+            </div>
+        </div>
 
-    <div id="historyList">
-        <p>No hay resultados todavía</p>
+        <div class="history-section">
+            <h3>Historial de Resultados</h3>
+            <div id="historyList">
+                <p>No hay resultados todavía</p>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="src/scripts/fizzBuzz.js"></script>
